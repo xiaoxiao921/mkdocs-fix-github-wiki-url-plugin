@@ -1,4 +1,3 @@
-
 from urllib.parse import urljoin
 from mkdocs.plugins import BasePlugin
 
@@ -9,7 +8,7 @@ class Plugin(BasePlugin):
         
     def _set_edit_url(self, page, repo_url):
         if repo_url:
-            src_path = page.file.src_path.replace('\\', '_')
+            src_path = page.file.src_path.replace('\\', '_').replace('/', '_')
             src_path = src_path.replace('.md', '')
             # Ensure urljoin behavior is correct
             if not repo_url.endswith('/'):
