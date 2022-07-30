@@ -1,4 +1,4 @@
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote
 from mkdocs.plugins import BasePlugin
 
 class Plugin(BasePlugin):
@@ -10,6 +10,7 @@ class Plugin(BasePlugin):
         if repo_url:
             src_path = page.file.src_path.replace('\\', '_').replace('/', '_')
             src_path = src_path.replace('.md', '')
+            src_path = quote(src_path)
             # Ensure urljoin behavior is correct
             if not repo_url.endswith('/'):
                 repo_url += '/'

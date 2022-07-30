@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name="mkdocs-fix-github-wiki-url-plugin",
-    version="0.1.20",
+    version="0.1.22",
     author="Quentin Escarbajal",
     author_email="xiaoxiao921@hotmail.fr",
     url="https://github.com/xiaoxiao921/mkdocs-fix-github-wiki-url-plugin",
